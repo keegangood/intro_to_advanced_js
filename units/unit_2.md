@@ -243,6 +243,8 @@ const assembleSpaghetti => (cookedNoodles, sauce) = {
         if(cookedNoodles && sauce) {
             const spaghetti = cookedNoodles + sauce;
             return resolve(spaghetti)
+        } else {
+            return reject(new Error('Spaghetti needs noodle and sauce'))
         }
     })
 }
