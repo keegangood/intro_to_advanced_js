@@ -267,6 +267,9 @@ makeSpaghetti()
 
 As we can see, this cleans up the logic of making the spaghetti quite a bit. Since each of the helper functions returns a Promise, we can chain the processes together using `.then()` and they will only be performed once the previous process has finished successfully. If an error is encountered along the way, it can be handled using `.catch()`.
 
+<br>
+<br>
+
 ## <a id="async-await"></a>`async` / `await`
 
 An `async` function is a function declared with the `async` keyword, and the `await` keyword is permitted within them. 
