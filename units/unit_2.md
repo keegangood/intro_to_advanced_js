@@ -80,7 +80,7 @@ Once the sauce is cooked, we can boil the water.
 
 ```javascript
 function makeSpaghetti() {
-    chopVeggies(function(choppedVeggies)){
+    chopVeggies(function(choppedVeggies){
         cookSauce(function(cookedSauce){
             boilWater(function(boilingWater){
                 // now we can cook the noodles
@@ -94,7 +94,7 @@ Once the water is boiling we can cook the noodles.
 
 ```javascript
 function makeSpaghetti() {
-    chopVeggies(function(choppedVeggies)){
+    chopVeggies(function(choppedVeggies){
         cookSauce(function(cookedSauce){
             boilWater(function(boilingWater){
                 cookNoodles(function(alDenteNoodles){
@@ -110,7 +110,7 @@ Now we can assemble the spaghetti.
 
 ```javascript
 function makeSpaghetti() {
-    chopVeggies(function(choppedVeggies)){
+    chopVeggies(function(choppedVeggies){
         cookSauce(function(cookedSauce){
             boilWater(function(boilingWater){
                 cookNoodles(function(alDenteNoodles){
@@ -128,7 +128,7 @@ Finally we can eat the spaghetti. But, we can't return `spaghetti` from `assembl
 
 ```javascript
 function makeSpaghetti() {
-    chopVeggies(function(choppedVeggies)){
+    chopVeggies(function(choppedVeggies){
         cookSauce(function(sauce){
             boilWater(function(boilingWater){
                 cookNoodles(function(cookedNoodles){
