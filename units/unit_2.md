@@ -155,7 +155,8 @@ Imagine if each of the callback functions had more complicated logic that spanne
 
 The callback functions could be cleaned up a bit by clever use of comments or by providing each callback a name, rather than writing them anonymously, but there are other, more streamlined solutions.
 
-
+<br>
+<br>
 
 ## <a id="promises"></a>Promises
 
@@ -177,9 +178,9 @@ A pending promise can either be fulfilled with a value or rejected with a reason
 
 The `Promise` constructor takes in a function with two parameters: `resolve` and `reject`. These are functions that will be called based on how the final outcome of the Promise.
 
-When a Promise is returned from a function, the result of `resolve` and `reject` can be handled using the Promise object's `.then()` and `.catch()` methods. 
+When a Promise is returned from a function, the result of the `resolve()` and `reject()` functions can be handled using the Promise object's `.then()` and `.catch()` methods. Both methods take in a function as an argument which will be executed when the method is called.
 
-If the Promise is resolved, `.then()` will be called. If the Promise is rejected `.catch()` will be called. 
+If the Promise is resolved, `.then()` will be called with the resulting data. If the Promise is rejected `.catch()` will be called with the resulting error. 
 
 `.then()` and `.catch()` both return new Promises of their own, so they can be chained. 
 
@@ -207,7 +208,7 @@ const chopVeggies = (veggies) => {
 
 const cookSauce = (choppedVeggies) => {
     return new Promise((resolve, reject)=>{
-        if(!choppedVeggies){
+        if(choppedVeggies){
             // if the veggies are chopped, cook them
             return resolve(sauce)
         } else {
@@ -300,7 +301,7 @@ const makeDinner = async () => {
 
 Now the process looks more like synchronous code and will wait for each step to be accomplished before beginning the next. 
 
-We can also use `try` / `catch` to handle errors.
+We can also use `try` / `catch` to handle any errors that happen along the way.
 
 ---
 
